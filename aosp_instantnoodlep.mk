@@ -26,7 +26,6 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 $(call inherit-product, vendor/aosp/config/common.mk)
 
 # Inherit GoogleCamera
-$(call inherit-product, vendor/GoogleCamera/config.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1440
@@ -41,6 +40,7 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_USES_AOSP_RECOVERY := true
 EXTRA_UDFPS_ANIMATIONS := true
+TARGET_ENABLE_BLUR := true
 
 PRODUCT_NAME := aosp_instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
@@ -53,5 +53,3 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=OnePlus8Pro
 
-# Pixel Launcher
-$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
