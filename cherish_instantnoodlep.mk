@@ -22,27 +22,32 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 
 # Inherit some common Elixir stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common.mk)
 
 # Inherit GoogleCamera
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
-# Elixir Official
-IS_PHONE := true
-TARGET_SUPPORTS_QUICK_TAP := true
-CUSTOM_BUILD_TYPE := OFFICIAL
-TARGET_SUPPORTS_GOOGLE_RECORDER := false
-TARGET_INCLUDE_STOCK_ACORE := false
+#Stuff
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_USES_AOSP_RECOVERY := true
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_ENABLE_BLUR := true
+TARGET_BUILD_GRAPHENEOS_CAMERA := true
 
-PRODUCT_NAME := aosp_instantnoodlep
+# Cherish Official
+
+CHERISH_BUILD_TYPE := OFFICIAL
+WITH_GMS := true
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=freesoul00
+
+PRODUCT_NAME := cherish_instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -50,6 +55,7 @@ PRODUCT_MODEL := IN2023
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=OnePlus8Pro
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_DEVICE=OnePlus8Pro \
+    PRODUCT_NAME=OnePlus8Pro
