@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_instantnoodlep.mk
+    $(LOCAL_DIR)/spark_instantnoodlep.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_instantnoodlep-user \
-    aosp_instantnoodlep-userdebug \
-    aosp_instantnoodlep-eng
+    spark_instantnoodlep-user \
+    spark_instantnoodlep-userdebug \
+    spark_instantnoodlep-eng
