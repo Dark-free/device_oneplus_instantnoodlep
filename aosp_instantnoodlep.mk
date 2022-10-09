@@ -37,7 +37,7 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
 EXTRA_UDFPS_ANIMATIONS := true
 
-ELIXIR_MAINTAINER := Freesoul00(Mehdi)
+ELIXIR_MAINTAINER := Freesoul00
 ELIXIR_BUILD_TYPE := OFFICIAL
 
 # Device identifier. This must come after all inclusions.
