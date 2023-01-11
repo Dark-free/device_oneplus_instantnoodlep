@@ -1,0 +1,6 @@
+kernel/oneplus
+vendor/oneplus
+device/oneplus
+hardware/qcom-caf/sm8250/display
+hardware/qcom-caf/sm8250/audio
+hardware/qcom-caf/sm8250/media
