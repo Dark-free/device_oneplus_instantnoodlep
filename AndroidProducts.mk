@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_instantnoodlep.mk
+    $(LOCAL_DIR)/cherish_instantnoodlep.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_instantnoodlep-user \
-    evolution_instantnoodlep-userdebug \
-    evolution_instantnoodlep-eng
+    cherish_instantnoodlep-user \
+    cherish_instantnoodlep-userdebug \
+    cherish_instantnoodlep-eng
