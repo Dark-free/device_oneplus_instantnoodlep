@@ -1,6 +1,5 @@
 #
 # Copyright (C) 2018 The LineageOS Project
-#               2022 The Evolution X Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -15,28 +14,35 @@ $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 # Inherit OnePlus firmware
 $(call inherit-product, vendor/oneplus/firmware/Android.mk)
 
-# Inherit some common Cherish stuff.
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
-$(call inherit-product, vendor/cherish/config/common.mk)
+# Inherit some common PixelExperience stuff.
 
-# CherishOS Stuff with GApps
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_BUILD_GRAPHENEOS_CAMERA := false
-TARGET_FACE_UNLOCK_SUPPORTED := true
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1440
+
+# Elixir Stuff
+IS_PHONE := true
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ACORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_ENABLE_BLUR := true
-TARGET_USES_MINI_GAPPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_SUPPORTS_QUICK_TAP  := true
 
-CHERISH_BUILD_TYPE := OFFICIAL
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cherish.maintainer=Freesoul00
+# Official
 
-PRODUCT_NAME := cherish_instantnoodlep
+PPUI_MAINTAINER := Freesoul00
+CUSTOM_BUILD_TYPE := OFFICIAL
+
+PRODUCT_NAME := aosp_instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := IN2025
+CUSTOM_DEVICE := OnePlus8Pro
 
 PRODUCT_SYSTEM_NAME := OnePlus8Pro
 PRODUCT_SYSTEM_DEVICE := OnePlus8Pro
