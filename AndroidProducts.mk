@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_instantnoodlep.mk
+    $(LOCAL_DIR)/crystal_instantnoodlep.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_instantnoodlep-user \
-    aosp_instantnoodlep-userdebug \
-    aosp_instantnoodlep-eng
+    crystal_instantnoodlep-user \
+    crystal_instantnoodlep-userdebug \
+    crystal_instantnoodlep-eng

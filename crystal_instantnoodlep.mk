@@ -14,30 +14,19 @@ $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 # Inherit OnePlus firmware
 $(call inherit-product, vendor/oneplus/firmware/Android.mk)
 
-# Inherit some common PixelExperience stuff.
+# Inherit some common Crystal stuff.
 
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/crystal/config/common.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
-# Elixir Stuff
-IS_PHONE := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := false
-TARGET_INCLUDE_STOCK_ACORE := false
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_ENABLE_BLUR := true
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_SUPPORTS_QUICK_TAP  := true
-
 # Official
 
-PPUI_MAINTAINER := Freesoul00
-CUSTOM_BUILD_TYPE := OFFICIAL
+CRYSTAL_MAINTAINER := Freesoul00
+CRYSTAL_PURITY := GAPPS
 
-PRODUCT_NAME := aosp_instantnoodlep
+PRODUCT_NAME := crystal_instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
