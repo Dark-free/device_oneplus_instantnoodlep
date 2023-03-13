@@ -13,14 +13,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 
 # Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
-EVO_BUILD_TYPE := OFFICIAL
+# Extra Stuff
 EXTRA_UDFPS_ANIMATIONS := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_QUICK_TAP  := true
 
-PRODUCT_NAME := evolution_instantnoodlep
+#Official
+BLISS_BUILDTYPE = OFFICIAL
+
+PRODUCT_NAME := bliss_instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
